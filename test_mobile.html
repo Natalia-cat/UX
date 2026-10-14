@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f7f8f2">
+<title>Мой день — мобильный прототип</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#e4e7e0;color:#20251d;font-family:Arial,sans-serif}.app{max-width:430px;min-height:100dvh;margin:auto;background:#f7f8f2;display:flex;flex-direction:column;padding: max(24px,env(safe-area-inset-top)) 24px max(24px,env(safe-area-inset-bottom))}.top{display:flex;align-items:center;justify-content:space-between;height:48px;margin-bottom:32px}.brand{font-size:20px;font-weight:700;letter-spacing:-.7px}.avatar{width:40px;height:40px;border-radius:50%;background:#dfe8cf;display:grid;place-items:center;font-size:13px;font-weight:700}.eyebrow{font-size:12px;letter-spacing:1.6px;color:#67735c;font-weight:700;text-transform:uppercase}h1{font-size:38px;line-height:1.08;letter-spacing:-1.6px;margin:16px 0}p{font-size:16px;line-height:1.6;color:#6a7064;margin:0}.art{height:226px;margin:28px 0;position:relative;display:grid;place-items:center;background:#e9efdf;border-radius:28px;overflow:hidden}.circle{width:155px;height:155px;border-radius:50%;background:#b8cf96;display:grid;place-items:center;font-size:68px;transform:rotate(-8deg)}.tag{position:absolute;padding:10px 14px;background:#fff;border-radius:14px;font-size:12px;box-shadow:0 6px 24px #344b1910}.tag.one{left:16px;top:24px;transform:rotate(-6deg)}.tag.two{right:14px;bottom:24px;transform:rotate(5deg)}.card{background:#fff;border:1px solid #e6e9df;border-radius:22px;padding:20px;margin-bottom:24px}.row{display:flex;gap:14px;align-items:center}.icon{width:44px;height:44px;background:#f0f3e9;border-radius:14px;display:grid;place-items:center;font-size:22px}.card strong{display:block;font-size:16px;margin-bottom:5px}.card small{color:#767c70;font-size:13px}.bottom{margin-top:auto;padding-top:20px}button{border:0;font:inherit;cursor:pointer}.primary{display:flex;justify-content:space-between;align-items:center;width:100%;padding:20px 24px;background:#354c29;color:white;border-radius:100px;font-size:16px;font-weight:700}.primary:hover{background:#263b1c}.primary:focus-visible,.back:focus-visible{outline:3px solid #91b664;outline-offset:4px}.note{text-align:center;font-size:11px;margin-top:16px;color:#8a9083}.back{background:#e9eddf;width:44px;height:44px;border-radius:50%;font-size:24px}.step{font-size:12px;color:#767c70}.screen[hidden]{display:none}.screen{flex:1;display:flex;flex-direction:column}.detail-art{background:#e5ebfa}.detail-art .circle{background:#c7d4f4;transform:none}.list{padding:0;margin:24px 0;list-style:none}.list li{display:flex;gap:14px;align-items:center;padding:18px 0;border-bottom:1px solid #e1e5d8}.number{width:32px;height:32px;border-radius:50%;background:#e5ebd9;display:grid;place-items:center;font-size:13px}.list strong{font-size:15px;display:block;margin-bottom:4px}.list small{font-size:13px;color:#767c70}@media(min-width:600px){body{padding:32px 0}.app{min-height:840px;border-radius:32px;box-shadow:0 24px 80px #2531181c}}@media(prefers-reduced-motion:no-preference){.screen{animation:appear .25s ease}@keyframes appear{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}}
+</style>
+</head>
+<body>
+<main class="app">
+<section class="screen" id="home" aria-label="Главный экран">
+<header class="top"><span class="brand">мой день<span style="color:#83a65b">.</span></span><span class="avatar" aria-label="Профиль Анны">АН</span></header>
+<span class="eyebrow">Время для себя</span><h1 tabindex="-1">Маленький шаг.<br>Хороший день.</h1><p>Всего несколько минут, чтобы<br>замедлиться и почувствовать себя лучше.</p>
+<div class="art" aria-hidden="true"><span class="tag one">✦ Без спешки</span><div class="circle">☀</div><span class="tag two">В своём ритме ↗</span></div>
+<div class="card row"><div class="icon" aria-hidden="true">↟</div><div><strong>Твоя практика на сегодня</strong><small>Дыхание и спокойствие · 5 минут</small></div></div>
+<div class="bottom"><button class="primary" id="next">Посмотреть практику <span aria-hidden="true">→</span></button><p class="note">МОБИЛЬНЫЙ ПРОТОТИП · ЭКРАН 1 / 2</p></div>
+</section>
+<section class="screen" id="details" aria-label="Экран практики" hidden>
+<header class="top"><button class="back" id="back" aria-label="Вернуться на главный экран">←</button><span class="step">Практика на сегодня</span><span style="width:44px"></span></header>
+<span class="eyebrow">5 минут · Для начинающих</span><h1 tabindex="-1">Выдохни.<br>Ты уже здесь.</h1><p>Простая дыхательная практика,<br>которую можно сделать где угодно.</p>
+<div class="art detail-art" aria-hidden="true"><div class="circle">≈</div><span class="tag two">Момент тишины ✦</span></div>
+<ol class="list"><li><span class="number">1</span><div><strong>Устройся удобно</strong><small>Расслабь плечи и закрой глаза.</small></div></li><li><span class="number">2</span><div><strong>Вдохни на четыре счёта</strong><small>Медленно, без напряжения.</small></div></li><li><span class="number">3</span><div><strong>Выдохни на шесть счётов</strong><small>Повтори в своём темпе несколько раз.</small></div></li></ol>
+<div class="bottom"><button class="primary" id="done">Вернуться на главную <span aria-hidden="true">↩</span></button><p class="note">МОБИЛЬНЫЙ ПРОТОТИП · ЭКРАН 2 / 2</p></div>
+</section>
+</main>
+<script>
+const home=document.getElementById('home'),details=document.getElementById('details');
+function render(){const second=location.hash==='#practice';home.hidden=second;details.hidden=!second;document.title=second?'Практика — Мой день':'Мой день — мобильный прототип';window.scrollTo(0,0);(second?details:home).querySelector('h1').focus({preventScroll:true});}
+document.getElementById('next').onclick=()=>location.hash='practice';
+document.getElementById('back').onclick=document.getElementById('done').onclick=()=>location.hash='home';
+window.addEventListener('hashchange',render);render();
+</script>
+</body></html>
